@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="10px" >
+
+    <EditText
+        android:id="@+id/PassWord"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tx_password"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:inputType="textWebPassword" />
+
+    <TextView
+        android:id="@+id/tx_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/PassWord"
+        android:layout_below="@+id/UserName"
+        android:layout_marginTop="14dp"
+        android:text="@string/tx_password" />
+
+    <TextView
+        android:id="@+id/tx_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/UserName"
+        android:layout_below="@+id/reg"
+        android:text="@string/tx_username" />
+
+    <EditText
+        android:id="@+id/UserName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tx_password"
+        android:layout_below="@+id/tx_username"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tx_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="58dp"
+        android:layout_toRightOf="@+id/tx_username"
+        android:text="@string/tx_reg" />
+
+    <Button
+        android:id="@+id/RegButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/PassWord"
+        android:layout_marginLeft="43dp"
+        android:layout_toRightOf="@+id/tx_username"
+        android:text="@string/tx_reg" />
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/PassWord"
+        android:text="@string/tx_login" />
+
+</RelativeLayout>

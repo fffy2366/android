@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:orientation="vertical"
+     android:padding="10px">
+         
+         <TextView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/tx_username"
+                      android:text="@string/tx_username"/>
+         
+         <EditText android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@android:drawable/editbox_background"
+                   android:layout_below="@id/tx_username"
+                   android:id="@+id/UserName"/>
+         
+         <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                       android:layout_below="@id/UserName"
+                       android:id="@+id/tx_password"
+                       android:text="@string/tx_password"/>
+         
+         <EditText android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="textWebPassword"
+                       android:background="@android:drawable/editbox_background"
+                       android:layout_below="@id/tx_password"
+                       android:id="@+id/PassWord"/>
+         
+         <CheckBox
+                 android:id="@+id/Remember_PassWord"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_below="@id/PassWord"
+                 android:text="@string/tx_remember_password" />
+         
+         <Button
+                 android:id="@+id/Login"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_below="@id/PassWord"
+                 android:layout_alignParentRight="true"
+                 android:text="@string/tx_login" />
+
+         <Button
+             android:id="@+id/Login2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/Login"
+             android:layout_alignBottom="@+id/Login"
+             android:layout_marginRight="22dp"
+             android:layout_toLeftOf="@+id/Login"
+             android:text="@string/tx_reg" />
+         
+ </RelativeLayout>

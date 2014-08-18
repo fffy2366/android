@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fxt.myapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+		<!-- 在本应用中导入需要使用的包，放在application里面activity外面 -->  
+        <uses-library android:name="android.test.runner" />
+        <activity
+            android:name="com.fxt.myapp.LoginActivity"
+            android:label="@string/title_login" >
+        </activity> 
+        <activity android:name="com.fxt.myapp.MainActivity"
+                  android:label="@string/title_helloword"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity android:name="com.fxt.myapp.RegActivity"
+                  android:label="@string/tx_reg">
+        </activity>
+        <activity android:name="com.fxt.myapp.ContactsActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        <activity android:name="HTMLViewerActivity" android:label="HTMLViewer"
+                  android:theme="@android:style/Theme.Light" 
+                  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" /> 
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <data android:scheme="file" />
+                <data android:scheme="content" /> 
+                <data android:mimeType="text/html"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="application/xhtml+xml"/>
+                <data android:mimeType="application/vnd.wap.xhtml+xml"/>
+            </intent-filter>
+         </activity>-->
+        </application>
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />    
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	
+	<!-- 记住这个一要放在application外面，不然会出现配置错误 信息 -->  
+    <instrumentation android:name="android.test.InstrumentationTestRunner"  
+        android:targetPackage="com.fxt.myapp" android:label="Tests for My App" />	
+</manifest>
